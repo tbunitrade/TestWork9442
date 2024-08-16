@@ -1,0 +1,23 @@
+[16-Aug-2024 16:46:35 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method City_Manager::get_cities_with_temperature() in /Applications/MAMP/htdocs/storefront/WordPress/wp-content/themes/storefront-child/inc/block-city-weather.php:19
+Stack trace:
+#0 /Applications/MAMP/htdocs/storefront/WordPress/wp-includes/class-wp-block.php(519): render_city_weather_block(Array, '\n<p class="wp-b...', Object(WP_Block))
+#1 /Applications/MAMP/htdocs/storefront/WordPress/wp-includes/blocks.php(2114): WP_Block->render()
+#2 /Applications/MAMP/htdocs/storefront/WordPress/wp-includes/blocks.php(2166): render_block(Array)
+#3 /Applications/MAMP/htdocs/storefront/WordPress/wp-includes/class-wp-hook.php(326): do_blocks('<!-- wp:storefr...')
+#4 /Applications/MAMP/htdocs/storefront/WordPress/wp-includes/plugin.php(205): WP_Hook->apply_filters('<!-- wp:storefr...', Array)
+#5 /Applications/MAMP/htdocs/storefront/WordPress/wp-includes/widgets/class-wp-widget-block.php(77): apply_filters('widget_block_co...', '<!-- wp:storefr...', Array, Object(WP_Widget_Block))
+#6 /Applications/MAMP/htdocs/storefront/WordPress/wp-includes/class-wp-widget.php(394): WP_Widget_Block->widget(Array, Array)
+#7 /Applications/MAMP/htdocs/storefront/WordPress/wp-includes/widgets.php(2041): WP_Widget->display_callback(Array, Array)
+#8 /Applications/MAMP/htdocs/storefront/WordPress/wp-includes/rest-api/endpoints/class-wp-rest-widgets-controller.php(697): wp_render_widget('block-8', 'footer-1')
+#9 /Applications/MAMP/htdocs/storefront/WordPress/wp-includes/rest-api/endpoints/class-wp-rest-widgets-controller.php(154): WP_REST_Widgets_Controller->prepare_item_for_response(Array, Object(WP_REST_Request))
+#10 /Applications/MAMP/htdocs/storefront/WordPress/wp-includes/rest-api/class-wp-rest-server.php(1230): WP_REST_Widgets_Controller->get_items(Object(WP_REST_Request))
+#11 /Applications/MAMP/htdocs/storefront/WordPress/wp-includes/rest-api/class-wp-rest-server.php(1063): WP_REST_Server->respond_to_request(Object(WP_REST_Request), '/wp/v2/widgets', Array, NULL)
+#12 /Applications/MAMP/htdocs/storefront/WordPress/wp-includes/rest-api.php(547): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#13 /Applications/MAMP/htdocs/storefront/WordPress/wp-includes/rest-api.php(2925): rest_do_request(Object(WP_REST_Request))
+#14 [internal function]: rest_preload_api_request(Array, '/wp/v2/widgets?...')
+#15 /Applications/MAMP/htdocs/storefront/WordPress/wp-includes/block-editor.php(767): array_reduce(Array, 'rest_preload_ap...', Array)
+#16 /Applications/MAMP/htdocs/storefront/WordPress/wp-admin/widgets-form-blocks.php(26): block_editor_rest_api_preload(Array, Object(WP_Block_Editor_Context))
+#17 /Applications/MAMP/htdocs/storefront/WordPress/wp-admin/widgets.php(32): require('/Applications/M...')
+#18 {main}
+  thrown in /Applications/MAMP/htdocs/storefront/WordPress/wp-content/themes/storefront-child/inc/block-city-weather.php on line 19
+[16-Aug-2024 16:48:16 UTC] PHP Notice:  Function wp_enqueue_script() was called <strong>incorrectly</strong>. "wp-editor" script should not be enqueued together with the new widgets editor (wp-edit-widgets or wp-customize-widgets). Please see <a href="https://developer.wordpress.org/advanced-administration/debug/debug-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 5.8.0.) in /Applications/MAMP/htdocs/storefront/WordPress/wp-includes/functions.php on line 6095
